@@ -1,0 +1,15 @@
+
+<div class="p-3 card-deck row" >
+  <div class="col-sm-6 col-lg-3 col-md-6 col-12" *ngFor="let team of teams; let i=index">
+    <div class="card">
+      <img class="card-img-top" style="height: 200px; width: 100%; display: block;" src="assets/img/{{team.photo}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{ team.name }}</h5>
+        <a href="#" class="btn btn-outline-primary btn-block" [routerLink]="[ '/info', team.id ]">
+          Ver mas...
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</div>

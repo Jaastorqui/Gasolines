@@ -1,0 +1,13 @@
+<div class="container" *ngIf="team">
+  <h1>{{ team.name }}</h1>
+  <p>{{ team.description }}</p>
+  <figure>
+    <img src="assets/img/{{team.photo}}">
+  </figure>
+<pre> {{ team.lat | json }}  {{ team.lng |json }}</pre>
+    <agm-map [latitude]="team.lat" [longitude]="team.lng" [zoom]="16" >
+        <agm-marker [latitude]="team.lat" [longitude]="team.lng"></agm-marker>
+      </agm-map>
+  
+    
+</div>

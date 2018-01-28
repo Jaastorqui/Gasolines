@@ -1,0 +1,146 @@
+[
+    {
+        "id" : 1,
+        "name" : "Alaves",
+        "photo" : "alaves.png",
+        "stadium" : "alaves.png",
+        "description" : "El Estadio de Mendizorroza (en euskera: Mendizorrotza) es un estadio de fútbol de la ciudad de Vitoria (Álava, España). De propiedad municipal, desde su inauguración, es el campo del Deportivo Alavés, que juega en LaLiga Santander del fútbol español. Fue inaugurado el 27 de abril de 1924",
+        "url": "https://es.wikipedia.org/wiki/Estadio_de_Mendizorroza",
+        "lat" : 42.8370858,
+        "lng" : -2.6904323
+
+    },
+    {
+        "id" : 2,
+        "name" : "Athletic",
+        "photo" : "athletic.png",
+        "description" : "El athletic es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 3,
+        "name" : "Atletico",
+        "photo" : "atletico.png",
+        "description" : "El Atletico es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 4,
+        "name" : "Barcelona",
+        "photo" : "barcelona.png",
+        "description" : "El Barcelona es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 5,
+        "name" : "Betis",
+        "photo" : "betis.png",
+        "description" : "El Betis es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 6,
+        "name" : "Celta",
+        "photo" : "celta.png",
+        "description" : "El Celta es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 7,
+        "name" : "Deportivo",
+        "photo" : "deportivo.png",
+        "description" : "El Deportivo es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 8,
+        "name" : "Eibar",
+        "photo" : "eibar.png",
+        "description" : "El Eibar es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 9,
+        "name" : "Espanyol",
+        "photo" : "espanyol.png",
+        "description" : "El Espanyol es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 10,
+        "name" : "Getafe",
+        "photo" : "getafe.png",
+        "description" : "El Getafe es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 11,
+        "name" : "Girona",
+        "photo" : "girona.png",
+        "description" : "El Girona es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 12,
+        "name" : "Las palmas",
+        "photo" : "las-palmas.png",
+        "description" : "El Las palmas es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 13,
+        "name" : "Athletic",
+        "photo" : "athletic.png",
+        "description" : "El athletic es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 14,
+        "name" : "Leganes",
+        "photo" : "leganes.png",
+        "description" : "El Leganes es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 15,
+        "name" : "Levante",
+        "photo" : "levante.png",
+        "description" : "El Levante es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 16,
+        "name" : "Malaga",
+        "photo" : "malaga.png",
+        "description" : "El Malaga es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 17,
+        "name" : "Real madrid",
+        "photo" : "real-madrid.png",
+        "description" : "El Real madrid es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 18,
+        "name" : "Real Sociedad",
+        "photo" : "real-sociedad.png",
+        "description" : "El Real Sociedad es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 19,
+        "name" : "Sevilla",
+        "photo" : "sevilla.png",
+        "description" : "El Sevilla es un equipo patatin patatan"
+
+    },
+    {
+        "id" : 20,
+        "name" : "Villareal",
+        "photo" : "villareal.png",
+        "description" : "El Villareal es un equipo patatin patatan"
+
+    }
+]
