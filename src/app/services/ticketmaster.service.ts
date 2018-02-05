@@ -11,11 +11,24 @@ export class TicketmasterService {
 
   apiKey :string = "qOOpSp7cLjPRPoXBpNflbs1jylXf1IS6";
   url:string = "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=ES&apikey=";
+  shows : any;
 
   getShow() {
     return this.http.get(this.url + this.apiKey)
       .map((data :any ) => {
-        return data
+        this.shows = data._embedded.events;
+        return this.shows
+      });
+  }
+
+  findByCity(city: string) {
+    return this.http.get(this.url + this.apiKey + "&city=" + city)
+      .map((data :any ) => {
+        if ( data._embedded )
+          this.shows = data._embedded.events;
+        else 
+          this.shows = [];
+        return this.shows
       });
   }
 

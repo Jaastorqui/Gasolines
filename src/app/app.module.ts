@@ -17,6 +17,7 @@ import { router } from './app.routes';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { InfoComponent } from './components/info/info.component';
 import { TicketmasterComponent } from './components/ticketmaster/ticketmaster.component';
+import { TicketmasterPipe } from './pipes/ticketmaster.pipe';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { TicketmasterComponent } from './components/ticketmaster/ticketmaster.co
     NavbarComponent,
     InfoComponent,
     TicketmasterComponent,
+    TicketmasterPipe,
   ],
   imports: [
     BrowserModule,

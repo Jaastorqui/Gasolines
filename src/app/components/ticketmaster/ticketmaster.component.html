@@ -6,7 +6,7 @@
 
       <div class="form-group">
         <label for="search">Search</label>
-        <input type="text" class="form-control" id="search" [(ngModel)]="search" aria-describedby="searchHelp">
+        <input type="text" class="form-control" id="search" [(ngModel)]="search" (ngModelChange)="findByCity()" aria-describedby="searchHelp">
         <small id="emailHelp" class="form-text text-muted">Filtro</small>    
       </div>
 
@@ -19,14 +19,16 @@
 
         <div class="card-group">
           <div class="row">
-            <div class="card col-md-3" *ngFor="let item of shows._embedded.events">
+            <div class="card col-md-3" *ngFor="let item of _ticketmaster.shows">
 
               
-              <img class="card-img-top" [src]="item.images[1].url" alt="Card image cap">
+              <img class="card-img-top" [src]="item.images | ticketmaster" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">{{ item.name }}</h5>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Desde {{ item.priceRanges[0].min }} {{ item.priceRanges[0].currency }}  </small></p>
+                <p class="card-text" ><small class="text-muted">{{ item.dates.start.dateTime | date:'dd/MM/yyyy   HH:mm' }}</small></p>
+                <p class="card-text"><small class="text-muted">Desde {{ item.priceRanges[0].min | currency:'EUR' }}</small></p>
+                <a [href]="item.url" target="_blank" class="badge badge-dark">Ver sitio web</a>
               </div>
             </div>
           </div>          
