@@ -1,0 +1,37 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-3">
+
+      <div class="form-group">
+        <label for="search">Search</label>
+        <input type="text" class="form-control" id="search" [(ngModel)]="search" aria-describedby="searchHelp">
+        <small id="emailHelp" class="form-text text-muted">Filtro</small>    
+      </div>
+
+    </div>
+
+    <div class="col-md-9">
+
+        <h1>{{ search }}</h1>
+        <hr/>
+
+        <div class="card-group">
+          <div class="row">
+            <div class="card col-md-3" *ngFor="let item of shows._embedded.events">
+
+              
+              <img class="card-img-top" [src]="item.images[1].url" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Desde {{ item.priceRanges[0].min }} {{ item.priceRanges[0].currency }}  </small></p>
+              </div>
+            </div>
+          </div>          
+        </div>
+    </div>
+  </div>
+
+</div>

@@ -1,13 +1,15 @@
 <div class="container" *ngIf="team">
-  <h1>{{ team.name }}</h1>
-  <p>{{ team.description }}</p>
+  <h1 class="h1 display-4">{{ team.name }}</h1>
+  <p class="lead">{{ team.description }}</p>
   <figure>
     <img src="assets/img/{{team.photo}}">
   </figure>
-<pre> {{ team.lat | json }}  {{ team.lng |json }}</pre>
+  <hr>
+  <small class="blockquote-footer">Informacion obtenida de <a [href]="team.url" target="_blank">Wikipedia</a></small>
+
     <agm-map [latitude]="team.lat" [longitude]="team.lng" [zoom]="16" >
-        <agm-marker [latitude]="team.lat" [longitude]="team.lng"></agm-marker>
-      </agm-map>
+      <agm-marker [latitude]="team.lat" [longitude]="team.lng"></agm-marker>
+    </agm-map>
   
     
 </div>
