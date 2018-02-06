@@ -9,11 +9,11 @@ const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'about', component: AboutComponent },
     { path: 'info/:id', component: InfoComponent },
-    { path: 'ticketmaster', component: TicketmasterComponent },
-    { path: 'ticketmaster/:id', component: TicketmasterInfoComponent },
+    { path: 'ticket', component: TicketmasterComponent },
+    { path: 'ticket/:id', component: TicketmasterInfoComponent },
     
     { path: '**', pathMatch: 'full', redirectTo: '' }
 
 ];
 
-export const router = RouterModule.forRoot(routes);
+export const router = RouterModule.forRoot(routes, { useHash: true });

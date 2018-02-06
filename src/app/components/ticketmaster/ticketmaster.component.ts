@@ -10,7 +10,7 @@ import { TicketPricePipe } from '../../pipes/ticket-price.pipe';
 })
 export class TicketmasterComponent implements OnInit {
 
-  constructor(private _ticketmaster : TicketmasterService) {
+  constructor(public _ticketmaster : TicketmasterService) {
     this._ticketmaster.getSearchByQuery().subscribe(data => {
       this.search = data;
     });

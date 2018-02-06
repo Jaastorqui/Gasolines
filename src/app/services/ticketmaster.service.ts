@@ -18,7 +18,7 @@ export class TicketmasterService {
   size : string = "&size=";
   postalCode : string = "&postalCode=";
   city : string = "&city=";
-  shows : any;
+  public shows : any;
   show : any;
   search = new Subject<any>();
 
