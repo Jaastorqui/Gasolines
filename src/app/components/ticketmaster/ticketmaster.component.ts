@@ -10,11 +10,17 @@ import { TicketPricePipe } from '../../pipes/ticket-price.pipe';
 })
 export class TicketmasterComponent implements OnInit {
 
-  constructor(private _ticketmaster : TicketmasterService) { }
+  constructor(private _ticketmaster : TicketmasterService) {
+    this._ticketmaster.getSearchByQuery().subscribe(data => {
+      this.search = data;
+    });
+   }
   shows: any;
   search : string;
   pageSize : number;
   page: any = 1;
+
+  cities: any[] = ['A Coruña','Albacete','Alicante','Almería','Badajoz','Badalona','Barcelona','Benidorm','Bilbao','Burgos','Cáceres','Cádiz','Cartagena','Córdoba','Elche','Gijón','Girona','Granada','Huelva','Ibiza','León','Lleida','Logroño','Madrid','Málaga','Marbella','Oviedo','Salamanca','Santander','Santiago de Compostela','Segovia','Sevilla','Tarragona','Teruel','Toledo','Valencia','Valladolid','Vigo','Zamora','Zaragoza'];
 
   
 
@@ -25,10 +31,12 @@ export class TicketmasterComponent implements OnInit {
     })
   }
 
-  findByCity() {
-    this._ticketmaster.findByCity(this.search)
+  findByCity(city : string = null) {
+    let _search = city ? city : this.search;
+    this._ticketmaster.findByCity(_search)
         .subscribe( data => {
           this.shows = data;
+          this.search = _search;
         })
   }
 
