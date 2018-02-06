@@ -9,12 +9,16 @@ export class TicketmasterService {
     console.log("Cargado ticket service");
    }
 
-  apiKey :string = "qOOpSp7cLjPRPoXBpNflbs1jylXf1IS6";
-  url:string = "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=ES&apikey=";
+  apiKey :string = "apikey=qOOpSp7cLjPRPoXBpNflbs1jylXf1IS6";
+  country : string = "countryCode=ES";
+  events : string = "events.json";
+  url:string = "https://app.ticketmaster.com/discovery/v2/";
   shows : any;
+  show : any;
 
   getShow() {
-    return this.http.get(this.url + this.apiKey)
+    let _url = this.url + this.events + "?" + this.country + "&" + this.apiKey;
+    return this.http.get(_url)
       .map((data :any ) => {
         this.shows = data._embedded.events;
         return this.shows
@@ -22,13 +26,23 @@ export class TicketmasterService {
   }
 
   findByCity(city: string) {
-    return this.http.get(this.url + this.apiKey + "&city=" + city)
+    let _url = this.url + this.events + "?" + this.country + "&" + this.apiKey + "&city=" + city;
+    return this.http.get(_url )
       .map((data :any ) => {
         if ( data._embedded )
           this.shows = data._embedded.events;
         else 
           this.shows = [];
         return this.shows
+      });
+  }
+
+  findById (id: string) {
+    let _url = this.url + "events/" + id + "?" + this.apiKey ;
+    return this.http.get(_url)
+      .map((data :any ) => {
+        this.show = data;
+        return this.show
       });
   }
 
