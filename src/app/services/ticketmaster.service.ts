@@ -13,11 +13,12 @@ export class TicketmasterService {
   country : string = "countryCode=ES";
   events : string = "events.json";
   url:string = "https://app.ticketmaster.com/discovery/v2/";
+  size : string = "&size=";
   shows : any;
   show : any;
 
   getShow() {
-    let _url = this.url + this.events + "?" + this.country + "&" + this.apiKey;
+    let _url = this.url + this.events + "?" + this.country + "&" + this.apiKey + this.size + "200";
     return this.http.get(_url)
       .map((data :any ) => {
         this.shows = data._embedded.events;

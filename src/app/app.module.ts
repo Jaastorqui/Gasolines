@@ -5,6 +5,7 @@ import { GetTeamsService } from './services/get-teams.service';
 import { TicketmasterService } from './services/ticketmaster.service';
 import { AgmCoreModule } from '@agm/core';
 import { FormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -41,6 +42,7 @@ import { TicketPricePipe } from './pipes/ticket-price.pipe';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB82pFg_av8RPy1p0trCouSbJxv5TA2sWQ'
     }),
+    NgbModule.forRoot(),
     FormsModule
   ],
   providers: [GetTeamsService, TicketmasterService],

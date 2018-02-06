@@ -13,10 +13,15 @@ export class TicketmasterComponent implements OnInit {
   constructor(private _ticketmaster : TicketmasterService) { }
   shows: any;
   search : string;
+  pageSize : number;
+  page: any = 1;
+
+  
 
   ngOnInit() {
     this._ticketmaster.getShow().subscribe( data => {
       this.shows = data;
+      this.pageSize = data.length;
     })
   }
 
@@ -26,5 +31,6 @@ export class TicketmasterComponent implements OnInit {
           this.shows = data;
         })
   }
+
 
 }

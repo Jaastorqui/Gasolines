@@ -6,7 +6,7 @@
 
       <div class="form-group">
         <label for="search">Search</label>
-        <input type="text" class="form-control" id="search" [(ngModel)]="search" (ngModelChange)="findByCity()" aria-describedby="searchHelp">
+        <input type="text" class="form-control" id="search" [(ngModel)]="search" (ngModelChange)="findByCity()" aria-describedby="searchHelp" placeholder="Find by City...">
         <small id="emailHelp" class="form-text text-muted">Filtro</small>    
       </div>
 
@@ -25,7 +25,8 @@
               <img class="card-img-top" [src]="item.images | ticketmaster" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">{{ item.name }}</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+                <p *ngFor="let a of item._embedded.attractions" class="card-text">{{ a.name }}</p>
                 <p class="card-text" ><small class="text-muted">{{ item.dates.start.dateTime | date:'dd/MM/yyyy   HH:mm' }}</small></p>
                 <p class="card-text"><small class="text-muted">Desde {{ item.priceRanges | ticketPrice | currency:'EUR' }}</small></p>
                 <a  [routerLink]="[item.id]" class="badge badge-primary">Ver mas detalles</a>
@@ -36,5 +37,7 @@
         </div>
     </div>
   </div>
+  <ngb-pagination [collectionSize]="pageSize" [pageSize]="20" [page]="page" aria-label="Default pagination"></ngb-pagination>
+
 
 </div>
