@@ -19,6 +19,7 @@ import { InfoComponent } from './components/info/info.component';
 import { TicketmasterComponent } from './components/ticketmaster/ticketmaster.component';
 import { TicketmasterPipe } from './pipes/ticketmaster.pipe';
 import { TicketmasterInfoComponent } from './components/ticketmaster-info/ticketmaster-info.component';
+import { TicketPricePipe } from './pipes/ticket-price.pipe';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { TicketmasterInfoComponent } from './components/ticketmaster-info/ticket
     TicketmasterComponent,
     TicketmasterPipe,
     TicketmasterInfoComponent,
+    TicketPricePipe,
   ],
   imports: [
     BrowserModule,

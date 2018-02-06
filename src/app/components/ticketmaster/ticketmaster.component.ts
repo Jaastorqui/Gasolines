@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TicketmasterService } from '../../services/ticketmaster.service';
-import { TicketmasterPipe } from '../../pipes/ticketmaster.pipe'
+import { TicketmasterPipe } from '../../pipes/ticketmaster.pipe';
+import { TicketPricePipe } from '../../pipes/ticket-price.pipe';
  
 @Component({
   selector: 'app-ticketmaster',

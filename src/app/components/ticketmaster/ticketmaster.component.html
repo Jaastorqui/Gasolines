@@ -19,7 +19,7 @@
 
         <div class="card-group">
           <div class="row">
-            <div class="card col-md-3" *ngFor="let item of _ticketmaster.shows; let i = index">
+            <div class="card col-md-4" *ngFor="let item of _ticketmaster.shows; let i = index">
 
               
               <img class="card-img-top" [src]="item.images | ticketmaster" alt="Card image cap">
@@ -27,7 +27,7 @@
                 <h5 class="card-title">{{ item.name }}</h5>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <p class="card-text" ><small class="text-muted">{{ item.dates.start.dateTime | date:'dd/MM/yyyy   HH:mm' }}</small></p>
-                <p class="card-text"><small class="text-muted">Desde {{ item.priceRanges[0].min | currency:'EUR' }}</small></p>
+                <p class="card-text"><small class="text-muted">Desde {{ item.priceRanges | ticketPrice | currency:'EUR' }}</small></p>
                 <a  [routerLink]="[item.id]" class="badge badge-primary">Ver mas detalles</a>
                 <a [href]="item.url" target="_blank" class="badge badge-dark">Ver sitio web</a>
               </div>
