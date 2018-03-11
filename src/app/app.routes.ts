@@ -11,9 +11,11 @@ const routes: Routes = [
     { path: 'info/:id', component: InfoComponent },
     { path: 'ticket', component: TicketmasterComponent },
     { path: 'ticket/:id', component: TicketmasterInfoComponent },
+    { path: 'marvel', loadChildren: 'app/marvel/marvel.module#MarvelModule' },
+    
     
     { path: '**', pathMatch: 'full', redirectTo: '' }
 
 ];
 
-export const router = RouterModule.forRoot(routes, { useHash: true });
+export const router = RouterModule.forRoot(routes);
